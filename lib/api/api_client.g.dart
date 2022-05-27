@@ -28,9 +28,13 @@ class _ApiClient implements ApiClient {
       r'q': cityName ?? location,
       r'days': days
     };
-    final result =
-        await _dio.get('/v1/forecast.json', queryParameters: queryParameters);
-    final value = Weather.fromJson(result.data!);
-    return value;
+    try {
+      final result =
+          await _dio.get('/v1/forecast.json', queryParameters: queryParameters);
+      final value = Weather.fromJson(result.data!);
+      return value;
+    } on DioError catch (error) {
+      throw DataException.fromDioError(error);
+    }
   }
 }
