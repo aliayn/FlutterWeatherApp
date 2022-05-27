@@ -29,6 +29,8 @@ dependencies:
   retrofit: 
   json_annotation: ^4.5.0
 
+  geolocator: ^8.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
