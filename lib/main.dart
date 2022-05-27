@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_app/service/app_service.dart';
 
-void main() {
+void main() async{
+  await AppService.init();
   runApp(const MyApp());
 }
 
@@ -12,4 +14,3 @@ class MyApp extends StatelessWidget {
     return const MaterialApp();
   }
 }
-
