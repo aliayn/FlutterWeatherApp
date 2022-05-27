@@ -22,11 +22,11 @@ class _ApiClient implements ApiClient {
 
   @override
   Future<Weather> getWeatherForecast(
-      {String? cityName, String? location, String days = '1'}) async {
+      {String? cityName, String? location, String? days}) async {
     final queryParameters = <String, dynamic>{
       r'key': apiKey,
       r'q': cityName ?? location,
-      r'days': days
+      r'days': days ?? '1'
     };
     try {
       final result =

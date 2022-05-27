@@ -12,12 +12,11 @@ class _Api {
 
 @RestApi(baseUrl: _Api.baseUrl)
 abstract class ApiClient {
-
-factory ApiClient(String apiKey, {String baseUrl}) = _ApiClient;
+  factory ApiClient(String apiKey, {String baseUrl}) = _ApiClient;
 
   @GET(_Api.forecastUrl)
   Future<Weather> getWeatherForecast(
       {@Query('q') String? cityName,
       @Query('q') String? location,
-      @Query('days') String days = '1'});
+      @Query('days') String? days});
 }

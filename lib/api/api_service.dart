@@ -10,7 +10,7 @@ class ApiService {
   Future<Weather> getWeatherForecast({
     String? cityName,
     String? location,
-    String days = '1',
+    String? days,
   }) =>
       _apiClient.getWeatherForecast(
         cityName: cityName,
