@@ -6,7 +6,7 @@ const String home = '/';
 Route<dynamic> generateRoute(RouteSettings value) {
   switch (value.name) {
     case home:
-      return MaterialPageRoute(builder: ((context) => const HomePage()));
+      return MaterialPageRoute(builder: ((context) => HomePage()));
     default:
       return MaterialPageRoute(
           builder: ((context) => Scaffold(

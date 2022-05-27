@@ -24,12 +24,16 @@ dependencies:
 
   flutter_dotenv: ^5.0.2
   flutter_spinkit: ^5.1.0
+  flutter_easyloading: ^3.0.5
 
   dio: ^4.0.4
   retrofit: 
   json_annotation: ^4.5.0
 
   geolocator: ^8.2.1
+
+  get_storage: ^2.0.3
+
 
 dev_dependencies:
   flutter_test:
