@@ -18,15 +18,22 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<HomeBloc>(
       lazy: true,
-      create: inject(),
-      child: _initUI(),
+      create: (context) => inject<HomeBloc>()..add(const HomeEvent.started()),
+      child: Scaffold(body: _initUI()),
     );
   }
 
   _initUI() => BlocBuilder<HomeBloc, HomeState>(
       builder: ((context, state) => state.maybeWhen(
             success: (weather) => _buildUI(weather, context),
-            initial: () => const SizedBox(),
+            initialLoading: () {
+              EasyLoading.show(status: 'loading...');
+              return const SizedBox();
+            },
+            fail: (error) {
+              EasyLoading.showError(error);
+              return const SizedBox();
+            },
             orElse: () => const SizedBox(),
           )));
 

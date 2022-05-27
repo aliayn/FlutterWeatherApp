@@ -21,7 +21,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   _init(event, emit) async {
-    emit(const _Loading());
+    emit(const _InitialLoading());
     await _repository
         .getWeatherForecast(cityName: getLastSearchedWeather())
         .then((value) => emit(_Success(value)))
