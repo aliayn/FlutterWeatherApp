@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
               EasyLoading.show(status: 'loading...');
               return const SizedBox();
             },
-            fail: (error) {
+            initialFail: (error) {
               EasyLoading.showError(error);
               return const SizedBox();
             },
