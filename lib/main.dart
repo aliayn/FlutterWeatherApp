@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_weather_app/routes/router.dart';
 import 'package:flutter_weather_app/service/app_service.dart';
 
@@ -13,10 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       onGenerateRoute: generateRoute,
       initialRoute: home,
-      builder: EasyLoading.init(),
     );
   }
 }
