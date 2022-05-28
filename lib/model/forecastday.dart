@@ -11,7 +11,7 @@ part 'forecastday.g.dart';
 class Forecastday with _$Forecastday {
   factory Forecastday({
     String? date,
-    @JsonKey(name: 'date_epoch') int? dateEpoch,
+    @JsonKey(name: 'date_epoch') num? dateEpoch,
     Day? day,
     Astro? astro,
     List<Hour>? hour,

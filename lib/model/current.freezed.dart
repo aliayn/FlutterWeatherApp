@@ -21,43 +21,43 @@ Current _$CurrentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Current {
   @JsonKey(name: 'last_updated_epoch')
-  int? get lastUpdatedEpoch => throw _privateConstructorUsedError;
+  num? get lastUpdatedEpoch => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_updated')
   String? get lastUpdated => throw _privateConstructorUsedError;
   @JsonKey(name: 'temp_c')
-  double? get tempC => throw _privateConstructorUsedError;
+  num? get tempC => throw _privateConstructorUsedError;
   @JsonKey(name: 'temp_f')
   double? get tempF => throw _privateConstructorUsedError;
   @JsonKey(name: 'is_day')
-  int? get isDay => throw _privateConstructorUsedError;
+  num? get isDay => throw _privateConstructorUsedError;
   Condition? get condition => throw _privateConstructorUsedError;
   @JsonKey(name: 'wind_mph')
   double? get windMph => throw _privateConstructorUsedError;
   @JsonKey(name: 'wind_kph')
-  double? get windKph => throw _privateConstructorUsedError;
+  num? get windKph => throw _privateConstructorUsedError;
   @JsonKey(name: 'wind_degree')
-  double? get windDegree => throw _privateConstructorUsedError;
+  num? get windDegree => throw _privateConstructorUsedError;
   @JsonKey(name: 'wind_dir')
   String? get windDir => throw _privateConstructorUsedError;
   @JsonKey(name: 'pressure_mb')
-  double? get pressureMb => throw _privateConstructorUsedError;
+  num? get pressureMb => throw _privateConstructorUsedError;
   @JsonKey(name: 'pressure_in')
   double? get pressureIn => throw _privateConstructorUsedError;
   @JsonKey(name: 'precip_mm')
-  double? get precipMm => throw _privateConstructorUsedError;
+  num? get precipMm => throw _privateConstructorUsedError;
   @JsonKey(name: 'precip_in')
-  double? get precipIn => throw _privateConstructorUsedError;
-  int? get humidity => throw _privateConstructorUsedError;
-  int? get cloud => throw _privateConstructorUsedError;
+  num? get precipIn => throw _privateConstructorUsedError;
+  num? get humidity => throw _privateConstructorUsedError;
+  num? get cloud => throw _privateConstructorUsedError;
   @JsonKey(name: 'feelslike_c')
   double? get feelslikeC => throw _privateConstructorUsedError;
   @JsonKey(name: 'feelslike_f')
   double? get feelslikeF => throw _privateConstructorUsedError;
   @JsonKey(name: 'vis_km')
-  double? get visKm => throw _privateConstructorUsedError;
+  num? get visKm => throw _privateConstructorUsedError;
   @JsonKey(name: 'vis_miles')
-  double? get visMiles => throw _privateConstructorUsedError;
-  int? get uv => throw _privateConstructorUsedError;
+  num? get visMiles => throw _privateConstructorUsedError;
+  num? get uv => throw _privateConstructorUsedError;
   @JsonKey(name: 'gust_mph')
   double? get gustMph => throw _privateConstructorUsedError;
   @JsonKey(name: 'gust_kph')
@@ -73,27 +73,27 @@ abstract class $CurrentCopyWith<$Res> {
   factory $CurrentCopyWith(Current value, $Res Function(Current) then) =
       _$CurrentCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'last_updated_epoch') int? lastUpdatedEpoch,
+      {@JsonKey(name: 'last_updated_epoch') num? lastUpdatedEpoch,
       @JsonKey(name: 'last_updated') String? lastUpdated,
-      @JsonKey(name: 'temp_c') double? tempC,
+      @JsonKey(name: 'temp_c') num? tempC,
       @JsonKey(name: 'temp_f') double? tempF,
-      @JsonKey(name: 'is_day') int? isDay,
+      @JsonKey(name: 'is_day') num? isDay,
       Condition? condition,
       @JsonKey(name: 'wind_mph') double? windMph,
-      @JsonKey(name: 'wind_kph') double? windKph,
-      @JsonKey(name: 'wind_degree') double? windDegree,
+      @JsonKey(name: 'wind_kph') num? windKph,
+      @JsonKey(name: 'wind_degree') num? windDegree,
       @JsonKey(name: 'wind_dir') String? windDir,
-      @JsonKey(name: 'pressure_mb') double? pressureMb,
+      @JsonKey(name: 'pressure_mb') num? pressureMb,
       @JsonKey(name: 'pressure_in') double? pressureIn,
-      @JsonKey(name: 'precip_mm') double? precipMm,
-      @JsonKey(name: 'precip_in') double? precipIn,
-      int? humidity,
-      int? cloud,
+      @JsonKey(name: 'precip_mm') num? precipMm,
+      @JsonKey(name: 'precip_in') num? precipIn,
+      num? humidity,
+      num? cloud,
       @JsonKey(name: 'feelslike_c') double? feelslikeC,
       @JsonKey(name: 'feelslike_f') double? feelslikeF,
-      @JsonKey(name: 'vis_km') double? visKm,
-      @JsonKey(name: 'vis_miles') double? visMiles,
-      int? uv,
+      @JsonKey(name: 'vis_km') num? visKm,
+      @JsonKey(name: 'vis_miles') num? visMiles,
+      num? uv,
       @JsonKey(name: 'gust_mph') double? gustMph,
       @JsonKey(name: 'gust_kph') double? gustKph});
 
@@ -138,7 +138,7 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       lastUpdatedEpoch: lastUpdatedEpoch == freezed
           ? _value.lastUpdatedEpoch
           : lastUpdatedEpoch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lastUpdated: lastUpdated == freezed
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
@@ -146,7 +146,7 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       tempC: tempC == freezed
           ? _value.tempC
           : tempC // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempF: tempF == freezed
           ? _value.tempF
           : tempF // ignore: cast_nullable_to_non_nullable
@@ -154,7 +154,7 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       isDay: isDay == freezed
           ? _value.isDay
           : isDay // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       condition: condition == freezed
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
@@ -166,11 +166,11 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       windKph: windKph == freezed
           ? _value.windKph
           : windKph // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       windDegree: windDegree == freezed
           ? _value.windDegree
           : windDegree // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       windDir: windDir == freezed
           ? _value.windDir
           : windDir // ignore: cast_nullable_to_non_nullable
@@ -178,7 +178,7 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       pressureMb: pressureMb == freezed
           ? _value.pressureMb
           : pressureMb // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       pressureIn: pressureIn == freezed
           ? _value.pressureIn
           : pressureIn // ignore: cast_nullable_to_non_nullable
@@ -186,19 +186,19 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       precipMm: precipMm == freezed
           ? _value.precipMm
           : precipMm // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       precipIn: precipIn == freezed
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       cloud: cloud == freezed
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       feelslikeC: feelslikeC == freezed
           ? _value.feelslikeC
           : feelslikeC // ignore: cast_nullable_to_non_nullable
@@ -210,15 +210,15 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       visKm: visKm == freezed
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       visMiles: visMiles == freezed
           ? _value.visMiles
           : visMiles // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       uv: uv == freezed
           ? _value.uv
           : uv // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       gustMph: gustMph == freezed
           ? _value.gustMph
           : gustMph // ignore: cast_nullable_to_non_nullable
@@ -249,27 +249,27 @@ abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
       __$$_CurrentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'last_updated_epoch') int? lastUpdatedEpoch,
+      {@JsonKey(name: 'last_updated_epoch') num? lastUpdatedEpoch,
       @JsonKey(name: 'last_updated') String? lastUpdated,
-      @JsonKey(name: 'temp_c') double? tempC,
+      @JsonKey(name: 'temp_c') num? tempC,
       @JsonKey(name: 'temp_f') double? tempF,
-      @JsonKey(name: 'is_day') int? isDay,
+      @JsonKey(name: 'is_day') num? isDay,
       Condition? condition,
       @JsonKey(name: 'wind_mph') double? windMph,
-      @JsonKey(name: 'wind_kph') double? windKph,
-      @JsonKey(name: 'wind_degree') double? windDegree,
+      @JsonKey(name: 'wind_kph') num? windKph,
+      @JsonKey(name: 'wind_degree') num? windDegree,
       @JsonKey(name: 'wind_dir') String? windDir,
-      @JsonKey(name: 'pressure_mb') double? pressureMb,
+      @JsonKey(name: 'pressure_mb') num? pressureMb,
       @JsonKey(name: 'pressure_in') double? pressureIn,
-      @JsonKey(name: 'precip_mm') double? precipMm,
-      @JsonKey(name: 'precip_in') double? precipIn,
-      int? humidity,
-      int? cloud,
+      @JsonKey(name: 'precip_mm') num? precipMm,
+      @JsonKey(name: 'precip_in') num? precipIn,
+      num? humidity,
+      num? cloud,
       @JsonKey(name: 'feelslike_c') double? feelslikeC,
       @JsonKey(name: 'feelslike_f') double? feelslikeF,
-      @JsonKey(name: 'vis_km') double? visKm,
-      @JsonKey(name: 'vis_miles') double? visMiles,
-      int? uv,
+      @JsonKey(name: 'vis_km') num? visKm,
+      @JsonKey(name: 'vis_miles') num? visMiles,
+      num? uv,
       @JsonKey(name: 'gust_mph') double? gustMph,
       @JsonKey(name: 'gust_kph') double? gustKph});
 
@@ -316,7 +316,7 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       lastUpdatedEpoch: lastUpdatedEpoch == freezed
           ? _value.lastUpdatedEpoch
           : lastUpdatedEpoch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       lastUpdated: lastUpdated == freezed
           ? _value.lastUpdated
           : lastUpdated // ignore: cast_nullable_to_non_nullable
@@ -324,7 +324,7 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       tempC: tempC == freezed
           ? _value.tempC
           : tempC // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       tempF: tempF == freezed
           ? _value.tempF
           : tempF // ignore: cast_nullable_to_non_nullable
@@ -332,7 +332,7 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       isDay: isDay == freezed
           ? _value.isDay
           : isDay // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       condition: condition == freezed
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
@@ -344,11 +344,11 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       windKph: windKph == freezed
           ? _value.windKph
           : windKph // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       windDegree: windDegree == freezed
           ? _value.windDegree
           : windDegree // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       windDir: windDir == freezed
           ? _value.windDir
           : windDir // ignore: cast_nullable_to_non_nullable
@@ -356,7 +356,7 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       pressureMb: pressureMb == freezed
           ? _value.pressureMb
           : pressureMb // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       pressureIn: pressureIn == freezed
           ? _value.pressureIn
           : pressureIn // ignore: cast_nullable_to_non_nullable
@@ -364,19 +364,19 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       precipMm: precipMm == freezed
           ? _value.precipMm
           : precipMm // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       precipIn: precipIn == freezed
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       cloud: cloud == freezed
           ? _value.cloud
           : cloud // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       feelslikeC: feelslikeC == freezed
           ? _value.feelslikeC
           : feelslikeC // ignore: cast_nullable_to_non_nullable
@@ -388,15 +388,15 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       visKm: visKm == freezed
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       visMiles: visMiles == freezed
           ? _value.visMiles
           : visMiles // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as num?,
       uv: uv == freezed
           ? _value.uv
           : uv // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       gustMph: gustMph == freezed
           ? _value.gustMph
           : gustMph // ignore: cast_nullable_to_non_nullable
@@ -442,19 +442,19 @@ class _$_Current implements _Current {
 
   @override
   @JsonKey(name: 'last_updated_epoch')
-  final int? lastUpdatedEpoch;
+  final num? lastUpdatedEpoch;
   @override
   @JsonKey(name: 'last_updated')
   final String? lastUpdated;
   @override
   @JsonKey(name: 'temp_c')
-  final double? tempC;
+  final num? tempC;
   @override
   @JsonKey(name: 'temp_f')
   final double? tempF;
   @override
   @JsonKey(name: 'is_day')
-  final int? isDay;
+  final num? isDay;
   @override
   final Condition? condition;
   @override
@@ -462,29 +462,29 @@ class _$_Current implements _Current {
   final double? windMph;
   @override
   @JsonKey(name: 'wind_kph')
-  final double? windKph;
+  final num? windKph;
   @override
   @JsonKey(name: 'wind_degree')
-  final double? windDegree;
+  final num? windDegree;
   @override
   @JsonKey(name: 'wind_dir')
   final String? windDir;
   @override
   @JsonKey(name: 'pressure_mb')
-  final double? pressureMb;
+  final num? pressureMb;
   @override
   @JsonKey(name: 'pressure_in')
   final double? pressureIn;
   @override
   @JsonKey(name: 'precip_mm')
-  final double? precipMm;
+  final num? precipMm;
   @override
   @JsonKey(name: 'precip_in')
-  final double? precipIn;
+  final num? precipIn;
   @override
-  final int? humidity;
+  final num? humidity;
   @override
-  final int? cloud;
+  final num? cloud;
   @override
   @JsonKey(name: 'feelslike_c')
   final double? feelslikeC;
@@ -493,12 +493,12 @@ class _$_Current implements _Current {
   final double? feelslikeF;
   @override
   @JsonKey(name: 'vis_km')
-  final double? visKm;
+  final num? visKm;
   @override
   @JsonKey(name: 'vis_miles')
-  final double? visMiles;
+  final num? visMiles;
   @override
-  final int? uv;
+  final num? uv;
   @override
   @JsonKey(name: 'gust_mph')
   final double? gustMph;
@@ -590,27 +590,27 @@ class _$_Current implements _Current {
 
 abstract class _Current implements Current {
   factory _Current(
-      {@JsonKey(name: 'last_updated_epoch') final int? lastUpdatedEpoch,
+      {@JsonKey(name: 'last_updated_epoch') final num? lastUpdatedEpoch,
       @JsonKey(name: 'last_updated') final String? lastUpdated,
-      @JsonKey(name: 'temp_c') final double? tempC,
+      @JsonKey(name: 'temp_c') final num? tempC,
       @JsonKey(name: 'temp_f') final double? tempF,
-      @JsonKey(name: 'is_day') final int? isDay,
+      @JsonKey(name: 'is_day') final num? isDay,
       final Condition? condition,
       @JsonKey(name: 'wind_mph') final double? windMph,
-      @JsonKey(name: 'wind_kph') final double? windKph,
-      @JsonKey(name: 'wind_degree') final double? windDegree,
+      @JsonKey(name: 'wind_kph') final num? windKph,
+      @JsonKey(name: 'wind_degree') final num? windDegree,
       @JsonKey(name: 'wind_dir') final String? windDir,
-      @JsonKey(name: 'pressure_mb') final double? pressureMb,
+      @JsonKey(name: 'pressure_mb') final num? pressureMb,
       @JsonKey(name: 'pressure_in') final double? pressureIn,
-      @JsonKey(name: 'precip_mm') final double? precipMm,
-      @JsonKey(name: 'precip_in') final double? precipIn,
-      final int? humidity,
-      final int? cloud,
+      @JsonKey(name: 'precip_mm') final num? precipMm,
+      @JsonKey(name: 'precip_in') final num? precipIn,
+      final num? humidity,
+      final num? cloud,
       @JsonKey(name: 'feelslike_c') final double? feelslikeC,
       @JsonKey(name: 'feelslike_f') final double? feelslikeF,
-      @JsonKey(name: 'vis_km') final double? visKm,
-      @JsonKey(name: 'vis_miles') final double? visMiles,
-      final int? uv,
+      @JsonKey(name: 'vis_km') final num? visKm,
+      @JsonKey(name: 'vis_miles') final num? visMiles,
+      final num? uv,
       @JsonKey(name: 'gust_mph') final double? gustMph,
       @JsonKey(name: 'gust_kph') final double? gustKph}) = _$_Current;
 
@@ -618,19 +618,19 @@ abstract class _Current implements Current {
 
   @override
   @JsonKey(name: 'last_updated_epoch')
-  int? get lastUpdatedEpoch => throw _privateConstructorUsedError;
+  num? get lastUpdatedEpoch => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'last_updated')
   String? get lastUpdated => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'temp_c')
-  double? get tempC => throw _privateConstructorUsedError;
+  num? get tempC => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'temp_f')
   double? get tempF => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'is_day')
-  int? get isDay => throw _privateConstructorUsedError;
+  num? get isDay => throw _privateConstructorUsedError;
   @override
   Condition? get condition => throw _privateConstructorUsedError;
   @override
@@ -638,29 +638,29 @@ abstract class _Current implements Current {
   double? get windMph => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'wind_kph')
-  double? get windKph => throw _privateConstructorUsedError;
+  num? get windKph => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'wind_degree')
-  double? get windDegree => throw _privateConstructorUsedError;
+  num? get windDegree => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'wind_dir')
   String? get windDir => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pressure_mb')
-  double? get pressureMb => throw _privateConstructorUsedError;
+  num? get pressureMb => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'pressure_in')
   double? get pressureIn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'precip_mm')
-  double? get precipMm => throw _privateConstructorUsedError;
+  num? get precipMm => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'precip_in')
-  double? get precipIn => throw _privateConstructorUsedError;
+  num? get precipIn => throw _privateConstructorUsedError;
   @override
-  int? get humidity => throw _privateConstructorUsedError;
+  num? get humidity => throw _privateConstructorUsedError;
   @override
-  int? get cloud => throw _privateConstructorUsedError;
+  num? get cloud => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'feelslike_c')
   double? get feelslikeC => throw _privateConstructorUsedError;
@@ -669,12 +669,12 @@ abstract class _Current implements Current {
   double? get feelslikeF => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vis_km')
-  double? get visKm => throw _privateConstructorUsedError;
+  num? get visKm => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vis_miles')
-  double? get visMiles => throw _privateConstructorUsedError;
+  num? get visMiles => throw _privateConstructorUsedError;
   @override
-  int? get uv => throw _privateConstructorUsedError;
+  num? get uv => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'gust_mph')
   double? get gustMph => throw _privateConstructorUsedError;

@@ -8,7 +8,7 @@ class Condition with _$Condition {
   factory Condition({
     String? text,
     String? icon,
-    int? code,
+    num? code,
   }) = _Condition;
 
   factory Condition.fromJson(Map<String, dynamic> json) =>

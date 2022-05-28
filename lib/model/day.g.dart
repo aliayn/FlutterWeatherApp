@@ -9,7 +9,7 @@ part of 'day.dart';
 _$_Day _$$_DayFromJson(Map<String, dynamic> json) => _$_Day(
       maxtempC: (json['maxtemp_c'] as num?)?.toDouble(),
       maxtempF: (json['maxtemp_f'] as num?)?.toDouble(),
-      mintempC: (json['mintemp_c'] as num?)?.toDouble(),
+      mintempC: json['mintemp_c'] as num?,
       mintempF: (json['mintemp_f'] as num?)?.toDouble(),
       avgtempC: (json['avgtemp_c'] as num?)?.toDouble(),
       avgtempF: (json['avgtemp_f'] as num?)?.toDouble(),
@@ -18,16 +18,16 @@ _$_Day _$$_DayFromJson(Map<String, dynamic> json) => _$_Day(
       totalprecipMm: (json['totalprecip_mm'] as num?)?.toDouble(),
       totalprecipIn: (json['totalprecip_in'] as num?)?.toDouble(),
       avgvisKm: (json['avgvis_km'] as num?)?.toDouble(),
-      avgvisMiles: (json['avgvis_miles'] as num?)?.toDouble(),
-      avghumidity: json['avghumidity'] as int?,
-      dailyWillItRain: (json['daily_will_it_rain'] as num?)?.toDouble(),
-      dailyChanceOfRain: (json['daily_chance_of_rain'] as num?)?.toDouble(),
-      dailyWillItSnow: (json['daily_will_it_snow'] as num?)?.toDouble(),
-      dailyChanceOfSnow: (json['daily_chance_of_snow'] as num?)?.toDouble(),
+      avgvisMiles: json['avgvis_miles'] as num?,
+      avghumidity: json['avghumidity'] as num?,
+      dailyWillItRain: json['daily_will_it_rain'] as num?,
+      dailyChanceOfRain: json['daily_chance_of_rain'] as num?,
+      dailyWillItSnow: json['daily_will_it_snow'] as num?,
+      dailyChanceOfSnow: json['daily_chance_of_snow'] as num?,
       condition: json['condition'] == null
           ? null
           : Condition.fromJson(json['condition'] as Map<String, dynamic>),
-      uv: (json['uv'] as num?)?.toDouble(),
+      uv: json['uv'] as num?,
     );
 
 Map<String, dynamic> _$$_DayToJson(_$_Day instance) => <String, dynamic>{

@@ -9,7 +9,7 @@ part of 'condition.dart';
 _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
       text: json['text'] as String?,
       icon: json['icon'] as String?,
-      code: json['code'] as int?,
+      code: json['code'] as num?,
     );
 
 Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) =>

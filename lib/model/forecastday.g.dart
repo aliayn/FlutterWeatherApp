@@ -9,7 +9,7 @@ part of 'forecastday.dart';
 _$_Forecastday _$$_ForecastdayFromJson(Map<String, dynamic> json) =>
     _$_Forecastday(
       date: json['date'] as String?,
-      dateEpoch: json['date_epoch'] as int?,
+      dateEpoch: json['date_epoch'] as num?,
       day: json['day'] == null
           ? null
           : Day.fromJson(json['day'] as Map<String, dynamic>),

@@ -28,7 +28,7 @@ mixin _$Location {
   @JsonKey(name: 'tz_id')
   String? get tzId => throw _privateConstructorUsedError;
   @JsonKey(name: 'localtime_epoch')
-  int? get localtimeEpoch => throw _privateConstructorUsedError;
+  num? get localtimeEpoch => throw _privateConstructorUsedError;
   String? get localtime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -48,7 +48,7 @@ abstract class $LocationCopyWith<$Res> {
       double? lat,
       double? lon,
       @JsonKey(name: 'tz_id') String? tzId,
-      @JsonKey(name: 'localtime_epoch') int? localtimeEpoch,
+      @JsonKey(name: 'localtime_epoch') num? localtimeEpoch,
       String? localtime});
 }
 
@@ -99,7 +99,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       localtimeEpoch: localtimeEpoch == freezed
           ? _value.localtimeEpoch
           : localtimeEpoch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       localtime: localtime == freezed
           ? _value.localtime
           : localtime // ignore: cast_nullable_to_non_nullable
@@ -121,7 +121,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       double? lat,
       double? lon,
       @JsonKey(name: 'tz_id') String? tzId,
-      @JsonKey(name: 'localtime_epoch') int? localtimeEpoch,
+      @JsonKey(name: 'localtime_epoch') num? localtimeEpoch,
       String? localtime});
 }
 
@@ -174,7 +174,7 @@ class __$$_LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       localtimeEpoch: localtimeEpoch == freezed
           ? _value.localtimeEpoch
           : localtimeEpoch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       localtime: localtime == freezed
           ? _value.localtime
           : localtime // ignore: cast_nullable_to_non_nullable
@@ -214,7 +214,7 @@ class _$_Location implements _Location {
   final String? tzId;
   @override
   @JsonKey(name: 'localtime_epoch')
-  final int? localtimeEpoch;
+  final num? localtimeEpoch;
   @override
   final String? localtime;
 
@@ -271,7 +271,7 @@ abstract class _Location implements Location {
       final double? lat,
       final double? lon,
       @JsonKey(name: 'tz_id') final String? tzId,
-      @JsonKey(name: 'localtime_epoch') final int? localtimeEpoch,
+      @JsonKey(name: 'localtime_epoch') final num? localtimeEpoch,
       final String? localtime}) = _$_Location;
 
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
@@ -291,7 +291,7 @@ abstract class _Location implements Location {
   String? get tzId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'localtime_epoch')
-  int? get localtimeEpoch => throw _privateConstructorUsedError;
+  num? get localtimeEpoch => throw _privateConstructorUsedError;
   @override
   String? get localtime => throw _privateConstructorUsedError;
   @override

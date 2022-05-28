@@ -12,7 +12,7 @@ class Location with _$Location {
     double? lat,
     double? lon,
     @JsonKey(name: 'tz_id') String? tzId,
-    @JsonKey(name: 'localtime_epoch') int? localtimeEpoch,
+    @JsonKey(name: 'localtime_epoch') num? localtimeEpoch,
     String? localtime,
   }) = _Location;
 

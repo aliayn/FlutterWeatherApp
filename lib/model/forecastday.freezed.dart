@@ -22,7 +22,7 @@ Forecastday _$ForecastdayFromJson(Map<String, dynamic> json) {
 mixin _$Forecastday {
   String? get date => throw _privateConstructorUsedError;
   @JsonKey(name: 'date_epoch')
-  int? get dateEpoch => throw _privateConstructorUsedError;
+  num? get dateEpoch => throw _privateConstructorUsedError;
   Day? get day => throw _privateConstructorUsedError;
   Astro? get astro => throw _privateConstructorUsedError;
   List<Hour>? get hour => throw _privateConstructorUsedError;
@@ -40,7 +40,7 @@ abstract class $ForecastdayCopyWith<$Res> {
       _$ForecastdayCopyWithImpl<$Res>;
   $Res call(
       {String? date,
-      @JsonKey(name: 'date_epoch') int? dateEpoch,
+      @JsonKey(name: 'date_epoch') num? dateEpoch,
       Day? day,
       Astro? astro,
       List<Hour>? hour});
@@ -73,7 +73,7 @@ class _$ForecastdayCopyWithImpl<$Res> implements $ForecastdayCopyWith<$Res> {
       dateEpoch: dateEpoch == freezed
           ? _value.dateEpoch
           : dateEpoch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
@@ -121,7 +121,7 @@ abstract class _$$_ForecastdayCopyWith<$Res>
   @override
   $Res call(
       {String? date,
-      @JsonKey(name: 'date_epoch') int? dateEpoch,
+      @JsonKey(name: 'date_epoch') num? dateEpoch,
       Day? day,
       Astro? astro,
       List<Hour>? hour});
@@ -158,7 +158,7 @@ class __$$_ForecastdayCopyWithImpl<$Res> extends _$ForecastdayCopyWithImpl<$Res>
       dateEpoch: dateEpoch == freezed
           ? _value.dateEpoch
           : dateEpoch // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as num?,
       day: day == freezed
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
@@ -193,7 +193,7 @@ class _$_Forecastday implements _Forecastday {
   final String? date;
   @override
   @JsonKey(name: 'date_epoch')
-  final int? dateEpoch;
+  final num? dateEpoch;
   @override
   final Day? day;
   @override
@@ -248,7 +248,7 @@ class _$_Forecastday implements _Forecastday {
 abstract class _Forecastday implements Forecastday {
   factory _Forecastday(
       {final String? date,
-      @JsonKey(name: 'date_epoch') final int? dateEpoch,
+      @JsonKey(name: 'date_epoch') final num? dateEpoch,
       final Day? day,
       final Astro? astro,
       final List<Hour>? hour}) = _$_Forecastday;
@@ -260,7 +260,7 @@ abstract class _Forecastday implements Forecastday {
   String? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'date_epoch')
-  int? get dateEpoch => throw _privateConstructorUsedError;
+  num? get dateEpoch => throw _privateConstructorUsedError;
   @override
   Day? get day => throw _privateConstructorUsedError;
   @override

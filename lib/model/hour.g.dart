@@ -7,24 +7,24 @@ part of 'hour.dart';
 // **************************************************************************
 
 _$_Hour _$$_HourFromJson(Map<String, dynamic> json) => _$_Hour(
-      timeEpoch: json['time_epoch'] as int?,
+      timeEpoch: json['time_epoch'] as num?,
       time: json['time'] as String?,
       tempC: (json['temp_c'] as num?)?.toDouble(),
       tempF: (json['temp_f'] as num?)?.toDouble(),
-      isDay: json['is_day'] as int?,
+      isDay: json['is_day'] as num?,
       condition: json['condition'] == null
           ? null
           : Condition.fromJson(json['condition'] as Map<String, dynamic>),
       windMph: (json['wind_mph'] as num?)?.toDouble(),
       windKph: (json['wind_kph'] as num?)?.toDouble(),
-      windDegree: (json['wind_degree'] as num?)?.toDouble(),
+      windDegree: json['wind_degree'] as num?,
       windDir: json['wind_dir'] as String?,
-      pressureMb: (json['pressure_mb'] as num?)?.toDouble(),
+      pressureMb: json['pressure_mb'] as num?,
       pressureIn: (json['pressure_in'] as num?)?.toDouble(),
       precipMm: (json['precip_mm'] as num?)?.toDouble(),
       precipIn: (json['precip_in'] as num?)?.toDouble(),
-      humidity: json['humidity'] as int?,
-      cloud: json['cloud'] as int?,
+      humidity: json['humidity'] as num?,
+      cloud: json['cloud'] as num?,
       feelslikeC: (json['feelslike_c'] as num?)?.toDouble(),
       feelslikeF: (json['feelslike_f'] as num?)?.toDouble(),
       windchillC: (json['windchill_c'] as num?)?.toDouble(),
@@ -33,15 +33,15 @@ _$_Hour _$$_HourFromJson(Map<String, dynamic> json) => _$_Hour(
       heatindexF: (json['heatindex_f'] as num?)?.toDouble(),
       dewpointC: (json['dewpoint_c'] as num?)?.toDouble(),
       dewpointF: (json['dewpoint_f'] as num?)?.toDouble(),
-      willItRain: (json['will_it_rain'] as num?)?.toDouble(),
-      chanceOfRain: (json['chance_of_rain'] as num?)?.toDouble(),
-      willItSnow: (json['will_it_snow'] as num?)?.toDouble(),
-      chanceOfSnow: (json['chance_of_snow'] as num?)?.toDouble(),
-      visKm: (json['vis_km'] as num?)?.toDouble(),
-      visMiles: (json['vis_miles'] as num?)?.toDouble(),
+      willItRain: json['will_it_rain'] as num?,
+      chanceOfRain: json['chance_of_rain'] as num?,
+      willItSnow: json['will_it_snow'] as num?,
+      chanceOfSnow: json['chance_of_snow'] as num?,
+      visKm: json['vis_km'] as num?,
+      visMiles: json['vis_miles'] as num?,
       gustMph: (json['gust_mph'] as num?)?.toDouble(),
       gustKph: (json['gust_kph'] as num?)?.toDouble(),
-      uv: (json['uv'] as num?)?.toDouble(),
+      uv: json['uv'] as num?,
     );
 
 Map<String, dynamic> _$$_HourToJson(_$_Hour instance) => <String, dynamic>{

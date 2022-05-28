@@ -13,7 +13,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       lat: (json['lat'] as num?)?.toDouble(),
       lon: (json['lon'] as num?)?.toDouble(),
       tzId: json['tz_id'] as String?,
-      localtimeEpoch: json['localtime_epoch'] as int?,
+      localtimeEpoch: json['localtime_epoch'] as num?,
       localtime: json['localtime'] as String?,
     );
 
