@@ -8,6 +8,8 @@ part 'current.g.dart';
 @freezed
 class Current with _$Current {
   factory Current({
+    @JsonKey(name: 'last_updated_epoch') int? lastUpdatedEpoch,
+    @JsonKey(name: 'last_updated') String? lastUpdated,
     @JsonKey(name: 'temp_c') int? tempC,
     @JsonKey(name: 'temp_f') double? tempF,
     @JsonKey(name: 'is_day') int? isDay,
@@ -23,7 +25,7 @@ class Current with _$Current {
     int? humidity,
     int? cloud,
     @JsonKey(name: 'feelslike_c') double? feelslikeC,
-    @JsonKey(name: 'feelslike_f') int? feelslikeF,
+    @JsonKey(name: 'feelslike_f') double? feelslikeF,
     @JsonKey(name: 'vis_km') int? visKm,
     @JsonKey(name: 'vis_miles') int? visMiles,
     int? uv,

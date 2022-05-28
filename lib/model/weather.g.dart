@@ -16,9 +16,6 @@ _$_Weather _$$_WeatherFromJson(Map<String, dynamic> json) => _$_Weather(
       forecast: json['forecast'] == null
           ? null
           : Forecast.fromJson(json['forecast'] as Map<String, dynamic>),
-      alert: json['alert'] == null
-          ? null
-          : Alert.fromJson(json['alert'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_WeatherToJson(_$_Weather instance) =>
@@ -26,5 +23,4 @@ Map<String, dynamic> _$$_WeatherToJson(_$_Weather instance) =>
       'location': instance.location,
       'current': instance.current,
       'forecast': instance.forecast,
-      'alert': instance.alert,
     };

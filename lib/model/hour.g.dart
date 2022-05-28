@@ -22,7 +22,7 @@ _$_Hour _$$_HourFromJson(Map<String, dynamic> json) => _$_Hour(
       pressureMb: json['pressure_mb'] as int?,
       pressureIn: (json['pressure_in'] as num?)?.toDouble(),
       precipMm: (json['precip_mm'] as num?)?.toDouble(),
-      precipIn: (json['precip_in'] as num?)?.toDouble(),
+      precipIn: json['precip_in'] as int?,
       humidity: json['humidity'] as int?,
       cloud: json['cloud'] as int?,
       feelslikeC: (json['feelslike_c'] as num?)?.toDouble(),
@@ -34,11 +34,14 @@ _$_Hour _$$_HourFromJson(Map<String, dynamic> json) => _$_Hour(
       dewpointC: (json['dewpoint_c'] as num?)?.toDouble(),
       dewpointF: (json['dewpoint_f'] as num?)?.toDouble(),
       willItRain: json['will_it_rain'] as int?,
-      chanceOfRain: json['chance_of_rain'] as String?,
+      chanceOfRain: json['chance_of_rain'] as int?,
       willItSnow: json['will_it_snow'] as int?,
-      chanceOfSnow: json['chance_of_snow'] as String?,
-      visKm: (json['vis_km'] as num?)?.toDouble(),
+      chanceOfSnow: json['chance_of_snow'] as int?,
+      visKm: json['vis_km'] as int?,
       visMiles: json['vis_miles'] as int?,
+      gustMph: (json['gust_mph'] as num?)?.toDouble(),
+      gustKph: (json['gust_kph'] as num?)?.toDouble(),
+      uv: json['uv'] as int?,
     );
 
 Map<String, dynamic> _$$_HourToJson(_$_Hour instance) => <String, dynamic>{
@@ -72,4 +75,7 @@ Map<String, dynamic> _$$_HourToJson(_$_Hour instance) => <String, dynamic>{
       'chance_of_snow': instance.chanceOfSnow,
       'vis_km': instance.visKm,
       'vis_miles': instance.visMiles,
+      'gust_mph': instance.gustMph,
+      'gust_kph': instance.gustKph,
+      'uv': instance.uv,
     };

@@ -20,6 +20,10 @@ Current _$CurrentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Current {
+  @JsonKey(name: 'last_updated_epoch')
+  int? get lastUpdatedEpoch => throw _privateConstructorUsedError;
+  @JsonKey(name: 'last_updated')
+  String? get lastUpdated => throw _privateConstructorUsedError;
   @JsonKey(name: 'temp_c')
   int? get tempC => throw _privateConstructorUsedError;
   @JsonKey(name: 'temp_f')
@@ -48,7 +52,7 @@ mixin _$Current {
   @JsonKey(name: 'feelslike_c')
   double? get feelslikeC => throw _privateConstructorUsedError;
   @JsonKey(name: 'feelslike_f')
-  int? get feelslikeF => throw _privateConstructorUsedError;
+  double? get feelslikeF => throw _privateConstructorUsedError;
   @JsonKey(name: 'vis_km')
   int? get visKm => throw _privateConstructorUsedError;
   @JsonKey(name: 'vis_miles')
@@ -69,7 +73,9 @@ abstract class $CurrentCopyWith<$Res> {
   factory $CurrentCopyWith(Current value, $Res Function(Current) then) =
       _$CurrentCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'temp_c') int? tempC,
+      {@JsonKey(name: 'last_updated_epoch') int? lastUpdatedEpoch,
+      @JsonKey(name: 'last_updated') String? lastUpdated,
+      @JsonKey(name: 'temp_c') int? tempC,
       @JsonKey(name: 'temp_f') double? tempF,
       @JsonKey(name: 'is_day') int? isDay,
       Condition? condition,
@@ -84,7 +90,7 @@ abstract class $CurrentCopyWith<$Res> {
       int? humidity,
       int? cloud,
       @JsonKey(name: 'feelslike_c') double? feelslikeC,
-      @JsonKey(name: 'feelslike_f') int? feelslikeF,
+      @JsonKey(name: 'feelslike_f') double? feelslikeF,
       @JsonKey(name: 'vis_km') int? visKm,
       @JsonKey(name: 'vis_miles') int? visMiles,
       int? uv,
@@ -104,6 +110,8 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? lastUpdatedEpoch = freezed,
+    Object? lastUpdated = freezed,
     Object? tempC = freezed,
     Object? tempF = freezed,
     Object? isDay = freezed,
@@ -127,6 +135,14 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
     Object? gustKph = freezed,
   }) {
     return _then(_value.copyWith(
+      lastUpdatedEpoch: lastUpdatedEpoch == freezed
+          ? _value.lastUpdatedEpoch
+          : lastUpdatedEpoch // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lastUpdated: lastUpdated == freezed
+          ? _value.lastUpdated
+          : lastUpdated // ignore: cast_nullable_to_non_nullable
+              as String?,
       tempC: tempC == freezed
           ? _value.tempC
           : tempC // ignore: cast_nullable_to_non_nullable
@@ -190,7 +206,7 @@ class _$CurrentCopyWithImpl<$Res> implements $CurrentCopyWith<$Res> {
       feelslikeF: feelslikeF == freezed
           ? _value.feelslikeF
           : feelslikeF // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       visKm: visKm == freezed
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
@@ -233,7 +249,9 @@ abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
       __$$_CurrentCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'temp_c') int? tempC,
+      {@JsonKey(name: 'last_updated_epoch') int? lastUpdatedEpoch,
+      @JsonKey(name: 'last_updated') String? lastUpdated,
+      @JsonKey(name: 'temp_c') int? tempC,
       @JsonKey(name: 'temp_f') double? tempF,
       @JsonKey(name: 'is_day') int? isDay,
       Condition? condition,
@@ -248,7 +266,7 @@ abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
       int? humidity,
       int? cloud,
       @JsonKey(name: 'feelslike_c') double? feelslikeC,
-      @JsonKey(name: 'feelslike_f') int? feelslikeF,
+      @JsonKey(name: 'feelslike_f') double? feelslikeF,
       @JsonKey(name: 'vis_km') int? visKm,
       @JsonKey(name: 'vis_miles') int? visMiles,
       int? uv,
@@ -270,6 +288,8 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? lastUpdatedEpoch = freezed,
+    Object? lastUpdated = freezed,
     Object? tempC = freezed,
     Object? tempF = freezed,
     Object? isDay = freezed,
@@ -293,6 +313,14 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
     Object? gustKph = freezed,
   }) {
     return _then(_$_Current(
+      lastUpdatedEpoch: lastUpdatedEpoch == freezed
+          ? _value.lastUpdatedEpoch
+          : lastUpdatedEpoch // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lastUpdated: lastUpdated == freezed
+          ? _value.lastUpdated
+          : lastUpdated // ignore: cast_nullable_to_non_nullable
+              as String?,
       tempC: tempC == freezed
           ? _value.tempC
           : tempC // ignore: cast_nullable_to_non_nullable
@@ -356,7 +384,7 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
       feelslikeF: feelslikeF == freezed
           ? _value.feelslikeF
           : feelslikeF // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       visKm: visKm == freezed
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
@@ -385,7 +413,9 @@ class __$$_CurrentCopyWithImpl<$Res> extends _$CurrentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Current implements _Current {
   _$_Current(
-      {@JsonKey(name: 'temp_c') this.tempC,
+      {@JsonKey(name: 'last_updated_epoch') this.lastUpdatedEpoch,
+      @JsonKey(name: 'last_updated') this.lastUpdated,
+      @JsonKey(name: 'temp_c') this.tempC,
       @JsonKey(name: 'temp_f') this.tempF,
       @JsonKey(name: 'is_day') this.isDay,
       this.condition,
@@ -410,6 +440,12 @@ class _$_Current implements _Current {
   factory _$_Current.fromJson(Map<String, dynamic> json) =>
       _$$_CurrentFromJson(json);
 
+  @override
+  @JsonKey(name: 'last_updated_epoch')
+  final int? lastUpdatedEpoch;
+  @override
+  @JsonKey(name: 'last_updated')
+  final String? lastUpdated;
   @override
   @JsonKey(name: 'temp_c')
   final int? tempC;
@@ -454,7 +490,7 @@ class _$_Current implements _Current {
   final double? feelslikeC;
   @override
   @JsonKey(name: 'feelslike_f')
-  final int? feelslikeF;
+  final double? feelslikeF;
   @override
   @JsonKey(name: 'vis_km')
   final int? visKm;
@@ -472,7 +508,7 @@ class _$_Current implements _Current {
 
   @override
   String toString() {
-    return 'Current(tempC: $tempC, tempF: $tempF, isDay: $isDay, condition: $condition, windMph: $windMph, windKph: $windKph, windDegree: $windDegree, windDir: $windDir, pressureMb: $pressureMb, pressureIn: $pressureIn, precipMm: $precipMm, precipIn: $precipIn, humidity: $humidity, cloud: $cloud, feelslikeC: $feelslikeC, feelslikeF: $feelslikeF, visKm: $visKm, visMiles: $visMiles, uv: $uv, gustMph: $gustMph, gustKph: $gustKph)';
+    return 'Current(lastUpdatedEpoch: $lastUpdatedEpoch, lastUpdated: $lastUpdated, tempC: $tempC, tempF: $tempF, isDay: $isDay, condition: $condition, windMph: $windMph, windKph: $windKph, windDegree: $windDegree, windDir: $windDir, pressureMb: $pressureMb, pressureIn: $pressureIn, precipMm: $precipMm, precipIn: $precipIn, humidity: $humidity, cloud: $cloud, feelslikeC: $feelslikeC, feelslikeF: $feelslikeF, visKm: $visKm, visMiles: $visMiles, uv: $uv, gustMph: $gustMph, gustKph: $gustKph)';
   }
 
   @override
@@ -480,6 +516,10 @@ class _$_Current implements _Current {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Current &&
+            const DeepCollectionEquality()
+                .equals(other.lastUpdatedEpoch, lastUpdatedEpoch) &&
+            const DeepCollectionEquality()
+                .equals(other.lastUpdated, lastUpdated) &&
             const DeepCollectionEquality().equals(other.tempC, tempC) &&
             const DeepCollectionEquality().equals(other.tempF, tempF) &&
             const DeepCollectionEquality().equals(other.isDay, isDay) &&
@@ -512,6 +552,8 @@ class _$_Current implements _Current {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
+        const DeepCollectionEquality().hash(lastUpdatedEpoch),
+        const DeepCollectionEquality().hash(lastUpdated),
         const DeepCollectionEquality().hash(tempC),
         const DeepCollectionEquality().hash(tempF),
         const DeepCollectionEquality().hash(isDay),
@@ -548,7 +590,9 @@ class _$_Current implements _Current {
 
 abstract class _Current implements Current {
   factory _Current(
-      {@JsonKey(name: 'temp_c') final int? tempC,
+      {@JsonKey(name: 'last_updated_epoch') final int? lastUpdatedEpoch,
+      @JsonKey(name: 'last_updated') final String? lastUpdated,
+      @JsonKey(name: 'temp_c') final int? tempC,
       @JsonKey(name: 'temp_f') final double? tempF,
       @JsonKey(name: 'is_day') final int? isDay,
       final Condition? condition,
@@ -563,7 +607,7 @@ abstract class _Current implements Current {
       final int? humidity,
       final int? cloud,
       @JsonKey(name: 'feelslike_c') final double? feelslikeC,
-      @JsonKey(name: 'feelslike_f') final int? feelslikeF,
+      @JsonKey(name: 'feelslike_f') final double? feelslikeF,
       @JsonKey(name: 'vis_km') final int? visKm,
       @JsonKey(name: 'vis_miles') final int? visMiles,
       final int? uv,
@@ -572,6 +616,12 @@ abstract class _Current implements Current {
 
   factory _Current.fromJson(Map<String, dynamic> json) = _$_Current.fromJson;
 
+  @override
+  @JsonKey(name: 'last_updated_epoch')
+  int? get lastUpdatedEpoch => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'last_updated')
+  String? get lastUpdated => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'temp_c')
   int? get tempC => throw _privateConstructorUsedError;
@@ -616,7 +666,7 @@ abstract class _Current implements Current {
   double? get feelslikeC => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'feelslike_f')
-  int? get feelslikeF => throw _privateConstructorUsedError;
+  double? get feelslikeF => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vis_km')
   int? get visKm => throw _privateConstructorUsedError;

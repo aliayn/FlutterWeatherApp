@@ -23,7 +23,7 @@ Widget cityInfoWidget(Weather weather) {
             size: 30,
             text: '$city',
             isBold: FontWeight.bold,
-            color:Constants.primaryColor,
+            color: Constants.primaryColor,
           ),
           RotationTransition(
             turns: AlwaysStoppedAnimation(windDegree! / 360),

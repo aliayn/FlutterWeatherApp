@@ -21,7 +21,7 @@ class Hour with _$Hour {
     @JsonKey(name: 'pressure_mb') int? pressureMb,
     @JsonKey(name: 'pressure_in') double? pressureIn,
     @JsonKey(name: 'precip_mm') double? precipMm,
-    @JsonKey(name: 'precip_in') double? precipIn,
+    @JsonKey(name: 'precip_in') int? precipIn,
     int? humidity,
     int? cloud,
     @JsonKey(name: 'feelslike_c') double? feelslikeC,
@@ -33,11 +33,14 @@ class Hour with _$Hour {
     @JsonKey(name: 'dewpoint_c') double? dewpointC,
     @JsonKey(name: 'dewpoint_f') double? dewpointF,
     @JsonKey(name: 'will_it_rain') int? willItRain,
-    @JsonKey(name: 'chance_of_rain') String? chanceOfRain,
+    @JsonKey(name: 'chance_of_rain') int? chanceOfRain,
     @JsonKey(name: 'will_it_snow') int? willItSnow,
-    @JsonKey(name: 'chance_of_snow') String? chanceOfSnow,
-    @JsonKey(name: 'vis_km') double? visKm,
+    @JsonKey(name: 'chance_of_snow') int? chanceOfSnow,
+    @JsonKey(name: 'vis_km') int? visKm,
     @JsonKey(name: 'vis_miles') int? visMiles,
+    @JsonKey(name: 'gust_mph') double? gustMph,
+    @JsonKey(name: 'gust_kph') double? gustKph,
+    int? uv,
   }) = _Hour;
 
   factory Hour.fromJson(Map<String, dynamic> json) => _$HourFromJson(json);

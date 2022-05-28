@@ -45,7 +45,7 @@ mixin _$Hour {
   @JsonKey(name: 'precip_mm')
   double? get precipMm => throw _privateConstructorUsedError;
   @JsonKey(name: 'precip_in')
-  double? get precipIn => throw _privateConstructorUsedError;
+  int? get precipIn => throw _privateConstructorUsedError;
   int? get humidity => throw _privateConstructorUsedError;
   int? get cloud => throw _privateConstructorUsedError;
   @JsonKey(name: 'feelslike_c')
@@ -67,15 +67,20 @@ mixin _$Hour {
   @JsonKey(name: 'will_it_rain')
   int? get willItRain => throw _privateConstructorUsedError;
   @JsonKey(name: 'chance_of_rain')
-  String? get chanceOfRain => throw _privateConstructorUsedError;
+  int? get chanceOfRain => throw _privateConstructorUsedError;
   @JsonKey(name: 'will_it_snow')
   int? get willItSnow => throw _privateConstructorUsedError;
   @JsonKey(name: 'chance_of_snow')
-  String? get chanceOfSnow => throw _privateConstructorUsedError;
+  int? get chanceOfSnow => throw _privateConstructorUsedError;
   @JsonKey(name: 'vis_km')
-  double? get visKm => throw _privateConstructorUsedError;
+  int? get visKm => throw _privateConstructorUsedError;
   @JsonKey(name: 'vis_miles')
   int? get visMiles => throw _privateConstructorUsedError;
+  @JsonKey(name: 'gust_mph')
+  double? get gustMph => throw _privateConstructorUsedError;
+  @JsonKey(name: 'gust_kph')
+  double? get gustKph => throw _privateConstructorUsedError;
+  int? get uv => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -100,7 +105,7 @@ abstract class $HourCopyWith<$Res> {
       @JsonKey(name: 'pressure_mb') int? pressureMb,
       @JsonKey(name: 'pressure_in') double? pressureIn,
       @JsonKey(name: 'precip_mm') double? precipMm,
-      @JsonKey(name: 'precip_in') double? precipIn,
+      @JsonKey(name: 'precip_in') int? precipIn,
       int? humidity,
       int? cloud,
       @JsonKey(name: 'feelslike_c') double? feelslikeC,
@@ -112,11 +117,14 @@ abstract class $HourCopyWith<$Res> {
       @JsonKey(name: 'dewpoint_c') double? dewpointC,
       @JsonKey(name: 'dewpoint_f') double? dewpointF,
       @JsonKey(name: 'will_it_rain') int? willItRain,
-      @JsonKey(name: 'chance_of_rain') String? chanceOfRain,
+      @JsonKey(name: 'chance_of_rain') int? chanceOfRain,
       @JsonKey(name: 'will_it_snow') int? willItSnow,
-      @JsonKey(name: 'chance_of_snow') String? chanceOfSnow,
-      @JsonKey(name: 'vis_km') double? visKm,
-      @JsonKey(name: 'vis_miles') int? visMiles});
+      @JsonKey(name: 'chance_of_snow') int? chanceOfSnow,
+      @JsonKey(name: 'vis_km') int? visKm,
+      @JsonKey(name: 'vis_miles') int? visMiles,
+      @JsonKey(name: 'gust_mph') double? gustMph,
+      @JsonKey(name: 'gust_kph') double? gustKph,
+      int? uv});
 
   $ConditionCopyWith<$Res>? get condition;
 }
@@ -161,6 +169,9 @@ class _$HourCopyWithImpl<$Res> implements $HourCopyWith<$Res> {
     Object? chanceOfSnow = freezed,
     Object? visKm = freezed,
     Object? visMiles = freezed,
+    Object? gustMph = freezed,
+    Object? gustKph = freezed,
+    Object? uv = freezed,
   }) {
     return _then(_value.copyWith(
       timeEpoch: timeEpoch == freezed
@@ -218,7 +229,7 @@ class _$HourCopyWithImpl<$Res> implements $HourCopyWith<$Res> {
       precipIn: precipIn == freezed
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
@@ -266,7 +277,7 @@ class _$HourCopyWithImpl<$Res> implements $HourCopyWith<$Res> {
       chanceOfRain: chanceOfRain == freezed
           ? _value.chanceOfRain
           : chanceOfRain // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       willItSnow: willItSnow == freezed
           ? _value.willItSnow
           : willItSnow // ignore: cast_nullable_to_non_nullable
@@ -274,14 +285,26 @@ class _$HourCopyWithImpl<$Res> implements $HourCopyWith<$Res> {
       chanceOfSnow: chanceOfSnow == freezed
           ? _value.chanceOfSnow
           : chanceOfSnow // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       visKm: visKm == freezed
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       visMiles: visMiles == freezed
           ? _value.visMiles
           : visMiles // ignore: cast_nullable_to_non_nullable
+              as int?,
+      gustMph: gustMph == freezed
+          ? _value.gustMph
+          : gustMph // ignore: cast_nullable_to_non_nullable
+              as double?,
+      gustKph: gustKph == freezed
+          ? _value.gustKph
+          : gustKph // ignore: cast_nullable_to_non_nullable
+              as double?,
+      uv: uv == freezed
+          ? _value.uv
+          : uv // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
@@ -317,7 +340,7 @@ abstract class _$$_HourCopyWith<$Res> implements $HourCopyWith<$Res> {
       @JsonKey(name: 'pressure_mb') int? pressureMb,
       @JsonKey(name: 'pressure_in') double? pressureIn,
       @JsonKey(name: 'precip_mm') double? precipMm,
-      @JsonKey(name: 'precip_in') double? precipIn,
+      @JsonKey(name: 'precip_in') int? precipIn,
       int? humidity,
       int? cloud,
       @JsonKey(name: 'feelslike_c') double? feelslikeC,
@@ -329,11 +352,14 @@ abstract class _$$_HourCopyWith<$Res> implements $HourCopyWith<$Res> {
       @JsonKey(name: 'dewpoint_c') double? dewpointC,
       @JsonKey(name: 'dewpoint_f') double? dewpointF,
       @JsonKey(name: 'will_it_rain') int? willItRain,
-      @JsonKey(name: 'chance_of_rain') String? chanceOfRain,
+      @JsonKey(name: 'chance_of_rain') int? chanceOfRain,
       @JsonKey(name: 'will_it_snow') int? willItSnow,
-      @JsonKey(name: 'chance_of_snow') String? chanceOfSnow,
-      @JsonKey(name: 'vis_km') double? visKm,
-      @JsonKey(name: 'vis_miles') int? visMiles});
+      @JsonKey(name: 'chance_of_snow') int? chanceOfSnow,
+      @JsonKey(name: 'vis_km') int? visKm,
+      @JsonKey(name: 'vis_miles') int? visMiles,
+      @JsonKey(name: 'gust_mph') double? gustMph,
+      @JsonKey(name: 'gust_kph') double? gustKph,
+      int? uv});
 
   @override
   $ConditionCopyWith<$Res>? get condition;
@@ -380,6 +406,9 @@ class __$$_HourCopyWithImpl<$Res> extends _$HourCopyWithImpl<$Res>
     Object? chanceOfSnow = freezed,
     Object? visKm = freezed,
     Object? visMiles = freezed,
+    Object? gustMph = freezed,
+    Object? gustKph = freezed,
+    Object? uv = freezed,
   }) {
     return _then(_$_Hour(
       timeEpoch: timeEpoch == freezed
@@ -437,7 +466,7 @@ class __$$_HourCopyWithImpl<$Res> extends _$HourCopyWithImpl<$Res>
       precipIn: precipIn == freezed
           ? _value.precipIn
           : precipIn // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       humidity: humidity == freezed
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
@@ -485,7 +514,7 @@ class __$$_HourCopyWithImpl<$Res> extends _$HourCopyWithImpl<$Res>
       chanceOfRain: chanceOfRain == freezed
           ? _value.chanceOfRain
           : chanceOfRain // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       willItSnow: willItSnow == freezed
           ? _value.willItSnow
           : willItSnow // ignore: cast_nullable_to_non_nullable
@@ -493,14 +522,26 @@ class __$$_HourCopyWithImpl<$Res> extends _$HourCopyWithImpl<$Res>
       chanceOfSnow: chanceOfSnow == freezed
           ? _value.chanceOfSnow
           : chanceOfSnow // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
       visKm: visKm == freezed
           ? _value.visKm
           : visKm // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       visMiles: visMiles == freezed
           ? _value.visMiles
           : visMiles // ignore: cast_nullable_to_non_nullable
+              as int?,
+      gustMph: gustMph == freezed
+          ? _value.gustMph
+          : gustMph // ignore: cast_nullable_to_non_nullable
+              as double?,
+      gustKph: gustKph == freezed
+          ? _value.gustKph
+          : gustKph // ignore: cast_nullable_to_non_nullable
+              as double?,
+      uv: uv == freezed
+          ? _value.uv
+          : uv // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
   }
@@ -539,7 +580,10 @@ class _$_Hour implements _Hour {
       @JsonKey(name: 'will_it_snow') this.willItSnow,
       @JsonKey(name: 'chance_of_snow') this.chanceOfSnow,
       @JsonKey(name: 'vis_km') this.visKm,
-      @JsonKey(name: 'vis_miles') this.visMiles});
+      @JsonKey(name: 'vis_miles') this.visMiles,
+      @JsonKey(name: 'gust_mph') this.gustMph,
+      @JsonKey(name: 'gust_kph') this.gustKph,
+      this.uv});
 
   factory _$_Hour.fromJson(Map<String, dynamic> json) => _$$_HourFromJson(json);
 
@@ -582,7 +626,7 @@ class _$_Hour implements _Hour {
   final double? precipMm;
   @override
   @JsonKey(name: 'precip_in')
-  final double? precipIn;
+  final int? precipIn;
   @override
   final int? humidity;
   @override
@@ -616,23 +660,31 @@ class _$_Hour implements _Hour {
   final int? willItRain;
   @override
   @JsonKey(name: 'chance_of_rain')
-  final String? chanceOfRain;
+  final int? chanceOfRain;
   @override
   @JsonKey(name: 'will_it_snow')
   final int? willItSnow;
   @override
   @JsonKey(name: 'chance_of_snow')
-  final String? chanceOfSnow;
+  final int? chanceOfSnow;
   @override
   @JsonKey(name: 'vis_km')
-  final double? visKm;
+  final int? visKm;
   @override
   @JsonKey(name: 'vis_miles')
   final int? visMiles;
+  @override
+  @JsonKey(name: 'gust_mph')
+  final double? gustMph;
+  @override
+  @JsonKey(name: 'gust_kph')
+  final double? gustKph;
+  @override
+  final int? uv;
 
   @override
   String toString() {
-    return 'Hour(timeEpoch: $timeEpoch, time: $time, tempC: $tempC, tempF: $tempF, isDay: $isDay, condition: $condition, windMph: $windMph, windKph: $windKph, windDegree: $windDegree, windDir: $windDir, pressureMb: $pressureMb, pressureIn: $pressureIn, precipMm: $precipMm, precipIn: $precipIn, humidity: $humidity, cloud: $cloud, feelslikeC: $feelslikeC, feelslikeF: $feelslikeF, windchillC: $windchillC, windchillF: $windchillF, heatindexC: $heatindexC, heatindexF: $heatindexF, dewpointC: $dewpointC, dewpointF: $dewpointF, willItRain: $willItRain, chanceOfRain: $chanceOfRain, willItSnow: $willItSnow, chanceOfSnow: $chanceOfSnow, visKm: $visKm, visMiles: $visMiles)';
+    return 'Hour(timeEpoch: $timeEpoch, time: $time, tempC: $tempC, tempF: $tempF, isDay: $isDay, condition: $condition, windMph: $windMph, windKph: $windKph, windDegree: $windDegree, windDir: $windDir, pressureMb: $pressureMb, pressureIn: $pressureIn, precipMm: $precipMm, precipIn: $precipIn, humidity: $humidity, cloud: $cloud, feelslikeC: $feelslikeC, feelslikeF: $feelslikeF, windchillC: $windchillC, windchillF: $windchillF, heatindexC: $heatindexC, heatindexF: $heatindexF, dewpointC: $dewpointC, dewpointF: $dewpointF, willItRain: $willItRain, chanceOfRain: $chanceOfRain, willItSnow: $willItSnow, chanceOfSnow: $chanceOfSnow, visKm: $visKm, visMiles: $visMiles, gustMph: $gustMph, gustKph: $gustKph, uv: $uv)';
   }
 
   @override
@@ -682,7 +734,10 @@ class _$_Hour implements _Hour {
             const DeepCollectionEquality()
                 .equals(other.chanceOfSnow, chanceOfSnow) &&
             const DeepCollectionEquality().equals(other.visKm, visKm) &&
-            const DeepCollectionEquality().equals(other.visMiles, visMiles));
+            const DeepCollectionEquality().equals(other.visMiles, visMiles) &&
+            const DeepCollectionEquality().equals(other.gustMph, gustMph) &&
+            const DeepCollectionEquality().equals(other.gustKph, gustKph) &&
+            const DeepCollectionEquality().equals(other.uv, uv));
   }
 
   @JsonKey(ignore: true)
@@ -718,7 +773,10 @@ class _$_Hour implements _Hour {
         const DeepCollectionEquality().hash(willItSnow),
         const DeepCollectionEquality().hash(chanceOfSnow),
         const DeepCollectionEquality().hash(visKm),
-        const DeepCollectionEquality().hash(visMiles)
+        const DeepCollectionEquality().hash(visMiles),
+        const DeepCollectionEquality().hash(gustMph),
+        const DeepCollectionEquality().hash(gustKph),
+        const DeepCollectionEquality().hash(uv)
       ]);
 
   @JsonKey(ignore: true)
@@ -747,7 +805,7 @@ abstract class _Hour implements Hour {
       @JsonKey(name: 'pressure_mb') final int? pressureMb,
       @JsonKey(name: 'pressure_in') final double? pressureIn,
       @JsonKey(name: 'precip_mm') final double? precipMm,
-      @JsonKey(name: 'precip_in') final double? precipIn,
+      @JsonKey(name: 'precip_in') final int? precipIn,
       final int? humidity,
       final int? cloud,
       @JsonKey(name: 'feelslike_c') final double? feelslikeC,
@@ -759,11 +817,14 @@ abstract class _Hour implements Hour {
       @JsonKey(name: 'dewpoint_c') final double? dewpointC,
       @JsonKey(name: 'dewpoint_f') final double? dewpointF,
       @JsonKey(name: 'will_it_rain') final int? willItRain,
-      @JsonKey(name: 'chance_of_rain') final String? chanceOfRain,
+      @JsonKey(name: 'chance_of_rain') final int? chanceOfRain,
       @JsonKey(name: 'will_it_snow') final int? willItSnow,
-      @JsonKey(name: 'chance_of_snow') final String? chanceOfSnow,
-      @JsonKey(name: 'vis_km') final double? visKm,
-      @JsonKey(name: 'vis_miles') final int? visMiles}) = _$_Hour;
+      @JsonKey(name: 'chance_of_snow') final int? chanceOfSnow,
+      @JsonKey(name: 'vis_km') final int? visKm,
+      @JsonKey(name: 'vis_miles') final int? visMiles,
+      @JsonKey(name: 'gust_mph') final double? gustMph,
+      @JsonKey(name: 'gust_kph') final double? gustKph,
+      final int? uv}) = _$_Hour;
 
   factory _Hour.fromJson(Map<String, dynamic> json) = _$_Hour.fromJson;
 
@@ -806,7 +867,7 @@ abstract class _Hour implements Hour {
   double? get precipMm => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'precip_in')
-  double? get precipIn => throw _privateConstructorUsedError;
+  int? get precipIn => throw _privateConstructorUsedError;
   @override
   int? get humidity => throw _privateConstructorUsedError;
   @override
@@ -840,19 +901,27 @@ abstract class _Hour implements Hour {
   int? get willItRain => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'chance_of_rain')
-  String? get chanceOfRain => throw _privateConstructorUsedError;
+  int? get chanceOfRain => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'will_it_snow')
   int? get willItSnow => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'chance_of_snow')
-  String? get chanceOfSnow => throw _privateConstructorUsedError;
+  int? get chanceOfSnow => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vis_km')
-  double? get visKm => throw _privateConstructorUsedError;
+  int? get visKm => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'vis_miles')
   int? get visMiles => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'gust_mph')
+  double? get gustMph => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'gust_kph')
+  double? get gustKph => throw _privateConstructorUsedError;
+  @override
+  int? get uv => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_HourCopyWith<_$_Hour> get copyWith => throw _privateConstructorUsedError;

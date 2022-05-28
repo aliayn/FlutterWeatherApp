@@ -39,12 +39,20 @@ mixin _$Day {
   @JsonKey(name: 'totalprecip_mm')
   double? get totalprecipMm => throw _privateConstructorUsedError;
   @JsonKey(name: 'totalprecip_in')
-  double? get totalprecipIn => throw _privateConstructorUsedError;
+  int? get totalprecipIn => throw _privateConstructorUsedError;
   @JsonKey(name: 'avgvis_km')
   int? get avgvisKm => throw _privateConstructorUsedError;
   @JsonKey(name: 'avgvis_miles')
   int? get avgvisMiles => throw _privateConstructorUsedError;
   int? get avghumidity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_will_it_rain')
+  int? get dailyWillItRain => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_chance_of_rain')
+  int? get dailyChanceOfRain => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_will_it_snow')
+  int? get dailyWillItSnow => throw _privateConstructorUsedError;
+  @JsonKey(name: 'daily_chance_of_snow')
+  int? get dailyChanceOfSnow => throw _privateConstructorUsedError;
   Condition? get condition => throw _privateConstructorUsedError;
   int? get uv => throw _privateConstructorUsedError;
 
@@ -67,10 +75,14 @@ abstract class $DayCopyWith<$Res> {
       @JsonKey(name: 'maxwind_mph') double? maxwindMph,
       @JsonKey(name: 'maxwind_kph') double? maxwindKph,
       @JsonKey(name: 'totalprecip_mm') double? totalprecipMm,
-      @JsonKey(name: 'totalprecip_in') double? totalprecipIn,
+      @JsonKey(name: 'totalprecip_in') int? totalprecipIn,
       @JsonKey(name: 'avgvis_km') int? avgvisKm,
       @JsonKey(name: 'avgvis_miles') int? avgvisMiles,
       int? avghumidity,
+      @JsonKey(name: 'daily_will_it_rain') int? dailyWillItRain,
+      @JsonKey(name: 'daily_chance_of_rain') int? dailyChanceOfRain,
+      @JsonKey(name: 'daily_will_it_snow') int? dailyWillItSnow,
+      @JsonKey(name: 'daily_chance_of_snow') int? dailyChanceOfSnow,
       Condition? condition,
       int? uv});
 
@@ -100,6 +112,10 @@ class _$DayCopyWithImpl<$Res> implements $DayCopyWith<$Res> {
     Object? avgvisKm = freezed,
     Object? avgvisMiles = freezed,
     Object? avghumidity = freezed,
+    Object? dailyWillItRain = freezed,
+    Object? dailyChanceOfRain = freezed,
+    Object? dailyWillItSnow = freezed,
+    Object? dailyChanceOfSnow = freezed,
     Object? condition = freezed,
     Object? uv = freezed,
   }) {
@@ -143,7 +159,7 @@ class _$DayCopyWithImpl<$Res> implements $DayCopyWith<$Res> {
       totalprecipIn: totalprecipIn == freezed
           ? _value.totalprecipIn
           : totalprecipIn // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       avgvisKm: avgvisKm == freezed
           ? _value.avgvisKm
           : avgvisKm // ignore: cast_nullable_to_non_nullable
@@ -155,6 +171,22 @@ class _$DayCopyWithImpl<$Res> implements $DayCopyWith<$Res> {
       avghumidity: avghumidity == freezed
           ? _value.avghumidity
           : avghumidity // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyWillItRain: dailyWillItRain == freezed
+          ? _value.dailyWillItRain
+          : dailyWillItRain // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyChanceOfRain: dailyChanceOfRain == freezed
+          ? _value.dailyChanceOfRain
+          : dailyChanceOfRain // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyWillItSnow: dailyWillItSnow == freezed
+          ? _value.dailyWillItSnow
+          : dailyWillItSnow // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyChanceOfSnow: dailyChanceOfSnow == freezed
+          ? _value.dailyChanceOfSnow
+          : dailyChanceOfSnow // ignore: cast_nullable_to_non_nullable
               as int?,
       condition: condition == freezed
           ? _value.condition
@@ -194,10 +226,14 @@ abstract class _$$_DayCopyWith<$Res> implements $DayCopyWith<$Res> {
       @JsonKey(name: 'maxwind_mph') double? maxwindMph,
       @JsonKey(name: 'maxwind_kph') double? maxwindKph,
       @JsonKey(name: 'totalprecip_mm') double? totalprecipMm,
-      @JsonKey(name: 'totalprecip_in') double? totalprecipIn,
+      @JsonKey(name: 'totalprecip_in') int? totalprecipIn,
       @JsonKey(name: 'avgvis_km') int? avgvisKm,
       @JsonKey(name: 'avgvis_miles') int? avgvisMiles,
       int? avghumidity,
+      @JsonKey(name: 'daily_will_it_rain') int? dailyWillItRain,
+      @JsonKey(name: 'daily_chance_of_rain') int? dailyChanceOfRain,
+      @JsonKey(name: 'daily_will_it_snow') int? dailyWillItSnow,
+      @JsonKey(name: 'daily_chance_of_snow') int? dailyChanceOfSnow,
       Condition? condition,
       int? uv});
 
@@ -229,6 +265,10 @@ class __$$_DayCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res>
     Object? avgvisKm = freezed,
     Object? avgvisMiles = freezed,
     Object? avghumidity = freezed,
+    Object? dailyWillItRain = freezed,
+    Object? dailyChanceOfRain = freezed,
+    Object? dailyWillItSnow = freezed,
+    Object? dailyChanceOfSnow = freezed,
     Object? condition = freezed,
     Object? uv = freezed,
   }) {
@@ -272,7 +312,7 @@ class __$$_DayCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res>
       totalprecipIn: totalprecipIn == freezed
           ? _value.totalprecipIn
           : totalprecipIn // ignore: cast_nullable_to_non_nullable
-              as double?,
+              as int?,
       avgvisKm: avgvisKm == freezed
           ? _value.avgvisKm
           : avgvisKm // ignore: cast_nullable_to_non_nullable
@@ -284,6 +324,22 @@ class __$$_DayCopyWithImpl<$Res> extends _$DayCopyWithImpl<$Res>
       avghumidity: avghumidity == freezed
           ? _value.avghumidity
           : avghumidity // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyWillItRain: dailyWillItRain == freezed
+          ? _value.dailyWillItRain
+          : dailyWillItRain // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyChanceOfRain: dailyChanceOfRain == freezed
+          ? _value.dailyChanceOfRain
+          : dailyChanceOfRain // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyWillItSnow: dailyWillItSnow == freezed
+          ? _value.dailyWillItSnow
+          : dailyWillItSnow // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dailyChanceOfSnow: dailyChanceOfSnow == freezed
+          ? _value.dailyChanceOfSnow
+          : dailyChanceOfSnow // ignore: cast_nullable_to_non_nullable
               as int?,
       condition: condition == freezed
           ? _value.condition
@@ -314,6 +370,10 @@ class _$_Day implements _Day {
       @JsonKey(name: 'avgvis_km') this.avgvisKm,
       @JsonKey(name: 'avgvis_miles') this.avgvisMiles,
       this.avghumidity,
+      @JsonKey(name: 'daily_will_it_rain') this.dailyWillItRain,
+      @JsonKey(name: 'daily_chance_of_rain') this.dailyChanceOfRain,
+      @JsonKey(name: 'daily_will_it_snow') this.dailyWillItSnow,
+      @JsonKey(name: 'daily_chance_of_snow') this.dailyChanceOfSnow,
       this.condition,
       this.uv});
 
@@ -348,7 +408,7 @@ class _$_Day implements _Day {
   final double? totalprecipMm;
   @override
   @JsonKey(name: 'totalprecip_in')
-  final double? totalprecipIn;
+  final int? totalprecipIn;
   @override
   @JsonKey(name: 'avgvis_km')
   final int? avgvisKm;
@@ -358,13 +418,25 @@ class _$_Day implements _Day {
   @override
   final int? avghumidity;
   @override
+  @JsonKey(name: 'daily_will_it_rain')
+  final int? dailyWillItRain;
+  @override
+  @JsonKey(name: 'daily_chance_of_rain')
+  final int? dailyChanceOfRain;
+  @override
+  @JsonKey(name: 'daily_will_it_snow')
+  final int? dailyWillItSnow;
+  @override
+  @JsonKey(name: 'daily_chance_of_snow')
+  final int? dailyChanceOfSnow;
+  @override
   final Condition? condition;
   @override
   final int? uv;
 
   @override
   String toString() {
-    return 'Day(maxtempC: $maxtempC, maxtempF: $maxtempF, mintempC: $mintempC, mintempF: $mintempF, avgtempC: $avgtempC, avgtempF: $avgtempF, maxwindMph: $maxwindMph, maxwindKph: $maxwindKph, totalprecipMm: $totalprecipMm, totalprecipIn: $totalprecipIn, avgvisKm: $avgvisKm, avgvisMiles: $avgvisMiles, avghumidity: $avghumidity, condition: $condition, uv: $uv)';
+    return 'Day(maxtempC: $maxtempC, maxtempF: $maxtempF, mintempC: $mintempC, mintempF: $mintempF, avgtempC: $avgtempC, avgtempF: $avgtempF, maxwindMph: $maxwindMph, maxwindKph: $maxwindKph, totalprecipMm: $totalprecipMm, totalprecipIn: $totalprecipIn, avgvisKm: $avgvisKm, avgvisMiles: $avgvisMiles, avghumidity: $avghumidity, dailyWillItRain: $dailyWillItRain, dailyChanceOfRain: $dailyChanceOfRain, dailyWillItSnow: $dailyWillItSnow, dailyChanceOfSnow: $dailyChanceOfSnow, condition: $condition, uv: $uv)';
   }
 
   @override
@@ -391,29 +463,42 @@ class _$_Day implements _Day {
                 .equals(other.avgvisMiles, avgvisMiles) &&
             const DeepCollectionEquality()
                 .equals(other.avghumidity, avghumidity) &&
+            const DeepCollectionEquality()
+                .equals(other.dailyWillItRain, dailyWillItRain) &&
+            const DeepCollectionEquality()
+                .equals(other.dailyChanceOfRain, dailyChanceOfRain) &&
+            const DeepCollectionEquality()
+                .equals(other.dailyWillItSnow, dailyWillItSnow) &&
+            const DeepCollectionEquality()
+                .equals(other.dailyChanceOfSnow, dailyChanceOfSnow) &&
             const DeepCollectionEquality().equals(other.condition, condition) &&
             const DeepCollectionEquality().equals(other.uv, uv));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(maxtempC),
-      const DeepCollectionEquality().hash(maxtempF),
-      const DeepCollectionEquality().hash(mintempC),
-      const DeepCollectionEquality().hash(mintempF),
-      const DeepCollectionEquality().hash(avgtempC),
-      const DeepCollectionEquality().hash(avgtempF),
-      const DeepCollectionEquality().hash(maxwindMph),
-      const DeepCollectionEquality().hash(maxwindKph),
-      const DeepCollectionEquality().hash(totalprecipMm),
-      const DeepCollectionEquality().hash(totalprecipIn),
-      const DeepCollectionEquality().hash(avgvisKm),
-      const DeepCollectionEquality().hash(avgvisMiles),
-      const DeepCollectionEquality().hash(avghumidity),
-      const DeepCollectionEquality().hash(condition),
-      const DeepCollectionEquality().hash(uv));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(maxtempC),
+        const DeepCollectionEquality().hash(maxtempF),
+        const DeepCollectionEquality().hash(mintempC),
+        const DeepCollectionEquality().hash(mintempF),
+        const DeepCollectionEquality().hash(avgtempC),
+        const DeepCollectionEquality().hash(avgtempF),
+        const DeepCollectionEquality().hash(maxwindMph),
+        const DeepCollectionEquality().hash(maxwindKph),
+        const DeepCollectionEquality().hash(totalprecipMm),
+        const DeepCollectionEquality().hash(totalprecipIn),
+        const DeepCollectionEquality().hash(avgvisKm),
+        const DeepCollectionEquality().hash(avgvisMiles),
+        const DeepCollectionEquality().hash(avghumidity),
+        const DeepCollectionEquality().hash(dailyWillItRain),
+        const DeepCollectionEquality().hash(dailyChanceOfRain),
+        const DeepCollectionEquality().hash(dailyWillItSnow),
+        const DeepCollectionEquality().hash(dailyChanceOfSnow),
+        const DeepCollectionEquality().hash(condition),
+        const DeepCollectionEquality().hash(uv)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -437,10 +522,14 @@ abstract class _Day implements Day {
       @JsonKey(name: 'maxwind_mph') final double? maxwindMph,
       @JsonKey(name: 'maxwind_kph') final double? maxwindKph,
       @JsonKey(name: 'totalprecip_mm') final double? totalprecipMm,
-      @JsonKey(name: 'totalprecip_in') final double? totalprecipIn,
+      @JsonKey(name: 'totalprecip_in') final int? totalprecipIn,
       @JsonKey(name: 'avgvis_km') final int? avgvisKm,
       @JsonKey(name: 'avgvis_miles') final int? avgvisMiles,
       final int? avghumidity,
+      @JsonKey(name: 'daily_will_it_rain') final int? dailyWillItRain,
+      @JsonKey(name: 'daily_chance_of_rain') final int? dailyChanceOfRain,
+      @JsonKey(name: 'daily_will_it_snow') final int? dailyWillItSnow,
+      @JsonKey(name: 'daily_chance_of_snow') final int? dailyChanceOfSnow,
       final Condition? condition,
       final int? uv}) = _$_Day;
 
@@ -475,7 +564,7 @@ abstract class _Day implements Day {
   double? get totalprecipMm => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'totalprecip_in')
-  double? get totalprecipIn => throw _privateConstructorUsedError;
+  int? get totalprecipIn => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'avgvis_km')
   int? get avgvisKm => throw _privateConstructorUsedError;
@@ -484,6 +573,18 @@ abstract class _Day implements Day {
   int? get avgvisMiles => throw _privateConstructorUsedError;
   @override
   int? get avghumidity => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'daily_will_it_rain')
+  int? get dailyWillItRain => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'daily_chance_of_rain')
+  int? get dailyChanceOfRain => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'daily_will_it_snow')
+  int? get dailyWillItSnow => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'daily_chance_of_snow')
+  int? get dailyChanceOfSnow => throw _privateConstructorUsedError;
   @override
   Condition? get condition => throw _privateConstructorUsedError;
   @override

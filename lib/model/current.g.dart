@@ -7,6 +7,8 @@ part of 'current.dart';
 // **************************************************************************
 
 _$_Current _$$_CurrentFromJson(Map<String, dynamic> json) => _$_Current(
+      lastUpdatedEpoch: json['last_updated_epoch'] as int?,
+      lastUpdated: json['last_updated'] as String?,
       tempC: json['temp_c'] as int?,
       tempF: (json['temp_f'] as num?)?.toDouble(),
       isDay: json['is_day'] as int?,
@@ -24,7 +26,7 @@ _$_Current _$$_CurrentFromJson(Map<String, dynamic> json) => _$_Current(
       humidity: json['humidity'] as int?,
       cloud: json['cloud'] as int?,
       feelslikeC: (json['feelslike_c'] as num?)?.toDouble(),
-      feelslikeF: json['feelslike_f'] as int?,
+      feelslikeF: (json['feelslike_f'] as num?)?.toDouble(),
       visKm: json['vis_km'] as int?,
       visMiles: json['vis_miles'] as int?,
       uv: json['uv'] as int?,
@@ -34,6 +36,8 @@ _$_Current _$$_CurrentFromJson(Map<String, dynamic> json) => _$_Current(
 
 Map<String, dynamic> _$$_CurrentToJson(_$_Current instance) =>
     <String, dynamic>{
+      'last_updated_epoch': instance.lastUpdatedEpoch,
+      'last_updated': instance.lastUpdated,
       'temp_c': instance.tempC,
       'temp_f': instance.tempF,
       'is_day': instance.isDay,

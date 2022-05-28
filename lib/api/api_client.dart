@@ -7,7 +7,7 @@ part 'api_client.g.dart';
 
 class _Api {
   static const String baseUrl = 'https://api.weatherapi.com';
-  static const String forecastUrl = 'https://api.weatherapi.com';
+  static const String forecastUrl = '/v1/forecast.json';
 }
 
 @RestApi(baseUrl: _Api.baseUrl)
