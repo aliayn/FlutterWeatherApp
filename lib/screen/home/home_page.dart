@@ -37,34 +37,33 @@ class HomePage extends StatelessWidget {
             orElse: () => const SizedBox(),
           )));
 
-  _buildUI(Weather weather, BuildContext context) => SafeArea(
-        child: Stack(
-          children: [
-            SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const SizedBox(height: 70),
-                    cityInfoWidget(weather),
-                    const SizedBox(height: 15),
-                    carouselWidget(weather),
-                    const SizedBox(height: 15),
-                    windWidget(weather),
-                    const SizedBox(height: 15),
-                    barometerWidget(weather),
-                  ]),
-            ),
-            _headerWidget(context),
-            _blocListener()
-          ],
-        ),
-      );
-
-  _blocListener() => BlocListener<HomeBloc, HomeState>(
+  _buildUI(Weather weather, BuildContext context) =>
+      BlocListener<HomeBloc, HomeState>(
         listener: (context, state) => state.whenOrNull(
           loading: () => EasyLoading.show(status: 'loading...'),
           fail: (error) => EasyLoading.showError(error),
+        ),
+        child: SafeArea(
+          child: Stack(
+            children: [
+              SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 70),
+                      cityInfoWidget(weather),
+                      const SizedBox(height: 15),
+                      carouselWidget(weather),
+                      const SizedBox(height: 15),
+                      windWidget(weather),
+                      const SizedBox(height: 15),
+                      barometerWidget(weather),
+                    ]),
+              ),
+              _headerWidget(context),
+            ],
+          ),
         ),
       );
 

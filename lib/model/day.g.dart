@@ -16,18 +16,18 @@ _$_Day _$$_DayFromJson(Map<String, dynamic> json) => _$_Day(
       maxwindMph: (json['maxwind_mph'] as num?)?.toDouble(),
       maxwindKph: (json['maxwind_kph'] as num?)?.toDouble(),
       totalprecipMm: (json['totalprecip_mm'] as num?)?.toDouble(),
-      totalprecipIn: json['totalprecip_in'] as int?,
-      avgvisKm: json['avgvis_km'] as int?,
-      avgvisMiles: json['avgvis_miles'] as int?,
+      totalprecipIn: (json['totalprecip_in'] as num?)?.toDouble(),
+      avgvisKm: (json['avgvis_km'] as num?)?.toDouble(),
+      avgvisMiles: (json['avgvis_miles'] as num?)?.toDouble(),
       avghumidity: json['avghumidity'] as int?,
-      dailyWillItRain: json['daily_will_it_rain'] as int?,
-      dailyChanceOfRain: json['daily_chance_of_rain'] as int?,
-      dailyWillItSnow: json['daily_will_it_snow'] as int?,
-      dailyChanceOfSnow: json['daily_chance_of_snow'] as int?,
+      dailyWillItRain: (json['daily_will_it_rain'] as num?)?.toDouble(),
+      dailyChanceOfRain: (json['daily_chance_of_rain'] as num?)?.toDouble(),
+      dailyWillItSnow: (json['daily_will_it_snow'] as num?)?.toDouble(),
+      dailyChanceOfSnow: (json['daily_chance_of_snow'] as num?)?.toDouble(),
       condition: json['condition'] == null
           ? null
           : Condition.fromJson(json['condition'] as Map<String, dynamic>),
-      uv: json['uv'] as int?,
+      uv: (json['uv'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$$_DayToJson(_$_Day instance) => <String, dynamic>{
