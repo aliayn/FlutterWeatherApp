@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 showLoadingWidget() {
   return const SizedBox(
@@ -13,11 +15,9 @@ showLoaderDialog() {
       mainAxisSize: MainAxisSize.min,
       children: const [
         Center(
-            child: Text(
-          'Loading...',
-          style: TextStyle(fontSize: 18),
-        )),
-        Center(child: CircularProgressIndicator.adaptive())
+            child: SpinKitFadingCube(
+          color: CupertinoColors.systemBlue,
+        ))
       ],
     ),
   );
