@@ -4,6 +4,7 @@ import 'package:flutter_weather_app/bloc/home/home_bloc.dart';
 import 'package:flutter_weather_app/components/barometer_widget.dart';
 import 'package:flutter_weather_app/components/carousel_widget.dart';
 import 'package:flutter_weather_app/components/city_info_widget.dart';
+import 'package:flutter_weather_app/components/error_dialog_widget.dart';
 import 'package:flutter_weather_app/components/error_toast_widget.dart';
 import 'package:flutter_weather_app/components/loading_widget.dart';
 import 'package:flutter_weather_app/components/wind_widget.dart';
@@ -32,14 +33,11 @@ class HomePage extends StatelessWidget {
             orElse: (() => false))),
         builder: ((context, state) => state.maybeWhen(
               success: (weather) => _buildUI(weather, context),
-              initialLoading: () {
-                //  EasyLoading.show(status: 'loading...');
-                return const SizedBox();
-              },
-              initialFail: (error) {
-                // EasyLoading.showError(error);
-                return const SizedBox();
-              },
+              initialLoading: () => showLoaderDialog(),
+              initialFail: (error) => showInitErrorWidget(
+                  error.toString(),
+                  (() =>
+                      context.read<HomeBloc>().add(const HomeEvent.started()))),
               orElse: () => const SizedBox(),
             )),
       );
@@ -114,7 +112,7 @@ class HomePage extends StatelessWidget {
                 )
               ],
             ),
-            _headerListener()
+              _headerListener()
           ],
         ),
       );
@@ -123,10 +121,11 @@ class HomePage extends StatelessWidget {
         buildWhen: (previous, current) => current.maybeWhen(
           fail: (error) => true,
           loading: () => true,
+          success: (weather) => true,
           orElse: (() => false),
         ),
         builder: (context, state) => state.maybeWhen(
-            loading: () => showLoadingDialog(context),
+            loading: () => showLoadingWidget(),
             fail: (error) => errorToast(context, error.toString()),
             orElse: (() => const SizedBox())),
       );

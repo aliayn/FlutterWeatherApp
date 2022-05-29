@@ -30,11 +30,10 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   _getCityWeather(_FetchCityWeather event, emit) async {
     emit(const _Loading());
-    setLastSearchedWeather(event.city);
-    await _repository
-        .getWeatherForecast(cityName: event.city)
-        .then((value) => emit(_Success(value)))
-        .catchError((error) => emit(_Fail(error)));
+    await _repository.getWeatherForecast(cityName: event.city).then((value) {
+      setLastSearchedWeather(event.city);
+      emit(_Success(value));
+    }).catchError((error) => emit(_Fail(error)));
   }
 
   _getLocationWeather(_FetchLocationWeather event, emit, location) async {

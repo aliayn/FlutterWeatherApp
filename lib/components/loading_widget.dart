@@ -1,9 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-showLoadingDialog(BuildContext context) {
+showLoadingWidget() {
   return const SizedBox(
     width: double.maxFinite,
-    child: LinearProgressIndicator(color: CupertinoColors.darkBackgroundGray),
+    child: LinearProgressIndicator(),
+  );
+}
+
+showLoaderDialog() {
+  return Center(
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: const [
+        Center(
+            child: Text(
+          'Loading...',
+          style: TextStyle(fontSize: 18),
+        )),
+        Center(child: CircularProgressIndicator.adaptive())
+      ],
+    ),
   );
 }
