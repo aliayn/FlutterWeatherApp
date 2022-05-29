@@ -29,7 +29,6 @@ class _ApiClient implements ApiClient {
       r'days': days ?? '1'
     };
     try {
-      print(queryParameters);
       final result =
           await _dio.get('/v1/forecast.json', queryParameters: queryParameters);
       final value = Weather.fromJson(result.data!);

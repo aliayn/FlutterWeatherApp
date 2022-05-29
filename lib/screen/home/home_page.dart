@@ -118,12 +118,6 @@ class HomePage extends StatelessWidget {
       );
 
   _headerListener() => BlocBuilder<HomeBloc, HomeState>(
-        buildWhen: (previous, current) => current.maybeWhen(
-          fail: (error) => true,
-          loading: () => true,
-          success: (weather) => true,
-          orElse: (() => false),
-        ),
         builder: (context, state) => state.maybeWhen(
             loading: () => showLoadingWidget(),
             fail: (error) => errorToast(context, error.toString()),
